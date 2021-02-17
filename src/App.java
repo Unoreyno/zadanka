@@ -34,7 +34,7 @@ public class App {
             break;
             default:
 
-                System.out.println("Co innego");
+                System.out.println("Podałeś zły znak");
             break;
         }
         
