@@ -1,62 +1,54 @@
 import java.util.Scanner;
 
+import javax.swing.text.Style;
+
 public class App {
     public static void main(String[] args) throws Exception {
         
 
-        Scanner Scanner = new Scanner(System.in);
+      Scanner Scanner = new Scanner(System.in);
         
-        int wynik = 0;
-         // Zadeklaruj wartości
-      String[][] dane = {
-        {"Więcej niż jedno zwierzę","stado","klucz","dwa","owca","lama"},
-        {"Sporty na s","sztafeta","skok o tyczce", "skoki narciarskie", "sumo", "szachy"}
-      };
+      boolean s =(false);
 
-      // zadeklaruj wynik
-      
-      // Pętla wykonująca się tyle razy, ile jest pytań
-      for(int i = 0; i < dane.length; i++){
-        
-        // Wyświetl pytanie (pierwszy element każdej tablicy)
-        System.out.println(dane[i][0]); 
-        
-        // pobierz odpowiedź
-        String odp = Scanner.nextLine(); 
-        boolean correct = false;
-        // Pętla sprawdzająca odpowiedzi 
-        for(int it = 1; it < dane[i].length; it++){
+      int liczba = (int)(Math.random() * 100);
 
-            
-        
+      System.out.println("Masz 5 prób na zgadnięcie wylosowanej liczby");
+
+      // System.out.println(liczba); 
+
+        int proba = 1;
+
+
+        while(proba < 6){
           
-          // System.out.println("ODP: "+dane[i][it]); // Wyświetl każdą odpowiedź
-
-          // Sprawdź, czy odpowiedź użytkownika znajduje się w tablicy
-          // dodaj punkty do wyniku
-            if(odp.equals(dane[i][it])){
-
-                System.out.println("BRZDĘK");
-                correct = true;
-                wynik += it*10;
-              
-            }
-
-
+          System.out.println("To twoja "+proba+" próba, podaj liczbę");
+          int zgad = Scanner.nextInt();
+          if(zgad < liczba){
+            System.out.println("Niestety podałeś za małą liczbę");
+          }else if(zgad > liczba){
+            System.out.println("Niestety podałeś za dużą liczbę");
+          }else if(zgad == liczba){
+            s =true; 
+            break;
           }
-
-          
-        if(!correct){
-            System.out.println("X");
-        }else{
-
+          proba++;
         }
-        
-    }
-    System.out.println("Wynik to: "+wynik); // wyświetl wynik
+
+        if(s){
+          System.out.println("Brawo, zgadłeś");
+        }else{
+          System.out.println("Niestety nie zgadłeś");
+        }
+
+
+
+
+
+
+
       
         
-    Scanner.close();
+      Scanner.close();
         
         
     } 
