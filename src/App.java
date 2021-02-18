@@ -39,22 +39,22 @@ public class App {
 
     int i = 0;
         
-          while(i < miasta.length){
-            // System.out.println(miasta[i][0]);
+    while(i < miasta.length){
+     // System.out.println(miasta[i][0]);
     
-            if(woj.equals(miasta[i][0])){
-              // System.out.println(miasta[i][0]);
-              istnieje = true;
-              break;
-            }
-            i++;
+      if(woj.equals(miasta[i][0])){
+         // System.out.println(miasta[i][0]);
+        istnieje = true;
+        break;
+      }
+      i++;
     
     
-          }
+    }
     
           
-       if(istnieje){
-         return "Stolica tego Województwa to: "+miasta[i][1];
-       }else return "Podanego Województwa nie ma na liście";
-        }
+    if(istnieje){
+      return "Stolica tego Województwa to: "+miasta[i][1];
+    }else return "Podanego Województwa nie ma na liście";
+    }
 }
