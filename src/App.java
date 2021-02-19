@@ -8,23 +8,26 @@ public class App {
 
       Scanner Scanner = new Scanner(System.in);
        
+      Zad ZadObj = new Zad();
+      System.out.println(ZadObj.Name+" to "+ZadObj.Race+", który ma "+ZadObj.Age+" lat");
+
+          
       
-
-          System.out.println("Podaj nazwę województwa");
+      
+      
+      
+      
+      
+        // System.out.println("Podaj nazwę województwa");
           
-          System.out.println(szukanie(Scanner.nextLine()));
+        // System.out.println(szukanie(Scanner.nextLine()));
 
-
-          
-          
-        
-        
-          Scanner.close();
+        Scanner.close();
     
     }
   
 
-
+    /*
     static String szukanie( String woj ){
 
     
@@ -57,4 +60,5 @@ public class App {
       return "Stolica tego Województwa to: "+miasta[i][1];
     }else return "Podanego Województwa nie ma na liście";
     }
+    */
 }
